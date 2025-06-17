@@ -41,7 +41,6 @@ main.cv {
   }
 
   div.body {
-    
     display: flex;
     flex-direction: row;
     
@@ -90,12 +89,13 @@ main.cv {
 
     div#right-column {
       flex: 1;
-      transform: translate(calc(-1 * $border-width), 0);
+      transform: translate(calc(-1 * $border-width + 1px), 0);
 
       div.section-2 {
         div.volunteering {
           background-color: $primary-colour;
-          padding: 1.6rem;
+          padding: 1.6rem calc(1.6rem + $border-width);
+          text-align: left;
         }
 
         div.contact {
@@ -138,6 +138,30 @@ main.cv {
         div.passion {
           border: $primary-colour solid $border-width;
           padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  body {
+    padding: 1rem;
+  }
+
+  main.cv {
+    div.body {
+      flex-direction: column;
+
+      div#right-column {
+        transform: none;
+
+        div.section-2 {
+          div.contact {
+            ul {
+              padding-left: 10%;
+            }
+          }
         }
       }
     }
