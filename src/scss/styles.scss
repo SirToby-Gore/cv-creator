@@ -2,12 +2,9 @@ $primary-text-colour: var(--primary-text-colour);
 $secondary-text-colour: var(--secondary-text-colour);
 $primary-colour: var(--primary-colour);
 $background: var(--background);
-
 $border-width: var(--border-width);
 
 body {
-  padding: 10rem;
-  background-color: darkgray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,15 +12,14 @@ body {
 
 main.cv {
   padding: 3rem 1.6rem;
-  border-radius: 1.6rem;
 
   background-color: $background;
 
-  width: 90%;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 
   header.name {
     border: $border-width $primary-colour solid;
@@ -54,9 +50,15 @@ main.cv {
       font-size: 1.6rem;
       color: $secondary-text-colour;
       text-align: center;
+      margin: 0;
+      padding: 0;
     }
 
     h3.sub-title {
+      margin: 0;
+      padding: 0;
+      margin-top: 1rem;
+      
       span {
         text-transform: uppercase;
         color: $secondary-text-colour;
@@ -67,6 +69,11 @@ main.cv {
         }
       }
     }
+
+    p.description {
+      margin: 0;
+      margin-bottom: 0.6rem;
+    }
     
     div#left-column {
       flex: 1.4;
@@ -74,6 +81,8 @@ main.cv {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      gap: 2rem;
 
       article.about-me {
         align-content: center;
@@ -109,7 +118,7 @@ main.cv {
             a {
               display: flex;
               flex-direction: row;
-              gap: 0.6rem;
+              gap: 1rem;
 
               text-decoration: none;
               color: $secondary-text-colour;
@@ -123,7 +132,7 @@ main.cv {
                 text-decoration: underline;
               }
               
-              img {
+              svg {
                 aspect-ratio: 1;
                 width: 1.6rem;
                 background-color: $primary-colour;
