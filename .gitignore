@@ -2,3 +2,5 @@
 *.css.map
 *.html
 *.json
+*.pdf
+.*
